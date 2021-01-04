@@ -5,9 +5,11 @@
   "license": "MIT",
   "scripts": {
     "dev": "node server.js",
-    "start":"node server.js"
+    "start": "node server.js",
+    "test":"mocha"
   },
   "dependencies": {
-    "fastify": "^3.9.2"
+    "fastify": "^3.9.2",
+    "mocha": "^8.2.1"
   }
 }

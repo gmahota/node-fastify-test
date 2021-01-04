@@ -1,12 +1,14 @@
-FROM node:last
+FROM node:alpine
 
 # Create app directory
 WORKDIR /usr/src/app
 
-EXPOSE 5000
+COPY package*.json ./
+
+RUN yarn
 
 COPY . .
 
-RUN yarn 
+EXPOSE 5000
 
 CMD ["yarn","start"]
